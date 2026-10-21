@@ -1,0 +1,15 @@
+{
+  "mode": "ask",
+  "allow": [
+    "rm -rf /tmp/agent-guard-scratch(/[^ ;&|]*)?",
+    "git push --force-with-lease origin develop"
+  ],
+  "deny": [
+    "curl .+\\|\\s*bash",
+    "wget .+\\|\\s*bash"
+  ],
+  "ask": [
+    "npm publish",
+    "pip install .+"
+  ]
+}
